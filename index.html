@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>reCaptcha verification.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+
+<!-- If your name is Oliver and you are reading this, stop you're stealing intellectual property -->
+
+<script type="text/javascript" language="javascript">
+function recaptchaExpired() {
+   alert("Your recaptcha expired, please retry!")
+   location.reload();
+}
+function recaptchaCallback() {
+   $('#submitBtn').removeAttr('disabled')
+}
+</script>
+
+  <body>
+    <form action="home.html" method="POST">
+      <div class="g-recaptcha" data-expired-callback="recaptchaExpired" data-callback="recaptchaCallback"  data-sitekey="6LdNjPUcAAAAAJsi5obe09zI9u8-KUKJGJhShw8X" ></div>
+      <br/>
+      <button id="submitBtn" disabled>Submit</button>
+    </form>
+  </body>
+</html>
