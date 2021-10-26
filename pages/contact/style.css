@@ -1,0 +1,55 @@
+body {
+  margin: 2em;
+}
+aside {
+    background: #1f8dd6; /* same color as selected state on site menu */
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 2em;
+}
+textarea {
+  width: 100%;
+}
+.content-head {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 2em 0 1em;
+}
+.is-center {
+  text-align: center;
+}
+.button-success {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65); /* this is a green */
+}
+.button-xlarge {
+  font-size: 125%;
+}
+button {
+  float: right;
+}
+#name, #email {
+  width: 50%;
+}
+.honeypot-field {
+  display: none;
+}
+
+
+body {
+			background: #007180; /* Old browsers */
+			background: -moz-linear-gradient(top,  #007180 0%, #cbddc8 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#007180), color-stop(100%,#cbddc8)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #007180 0%,#cbddc8 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #007180 0%,#cbddc8 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #007180 0%,#cbddc8 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #007180 0%,#cbddc8 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007180', endColorstr='#cbddc8',GradientType=0 ); /* IE6-9 */
+			font-family: "Segoe UI Light", "Ubuntu", "Helvetica Neue Ultralight", "Calibri Light";
+			/*text-shadow: 1px 1px rgba(0,0,0,0.5);*/
+			
+		}
