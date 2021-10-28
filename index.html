@@ -12,8 +12,22 @@ function recaptchaExpired() {
    alert("Your recaptcha expired, please retry!")
    location.reload();
 }
+
+function setCookie() {
+       // alert("Test")
+       /* const d = new Date();
+         d.setTime(d.getTime() + (exdays*1));
+         let expires = "expires=" + d.toGMTString(); */
+        var now = new Date();
+        var time = now.getTime();
+        var expireTime = time + 1000*36000;
+        now.setTime(expireTime);
+         document.cookie = "captchapassed=true;" + "expires=" + now.toUTCString() + ";path=/;"
+    }
+
 function recaptchaCallback() {
-   $('#submitBtn').removeAttr('disabled')
+       setCookie();
+    $('#submitBtn').removeAttr('disabled')
 }
 </script>
 
@@ -21,7 +35,7 @@ function recaptchaCallback() {
     <form action="home.html" method="POST">
       <div class="g-recaptcha" data-expired-callback="recaptchaExpired" data-callback="recaptchaCallback"  data-sitekey="6LdNjPUcAAAAAJsi5obe09zI9u8-KUKJGJhShw8X" ></div>
       <br/>
-      <button id="submitBtn" disabled>Submit</button>
+      <button id="submitBtn" disabled >Submit</button>
     </form>
   </body>
 </html>
