@@ -24,3 +24,9 @@ function swapBG(){
 				hash: match[7]
 			}
 		}
+
+        function getCookie() {
+            var match = document.cookie.match(RegExp('(?:^|;\\s*)' + captchapassed + '=([^;]*)')); 
+            return match ? match[1] : null;
+            console.log(match)
+        }
