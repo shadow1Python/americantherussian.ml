@@ -91,10 +91,23 @@
 
 <!-- If your name is Oliver and you are reading this, stop you're stealing intellectual property -->
 
-<body>
+<body onload="getCookie()">
      <a href="../../home.html">
          <img alt="Home" src="https://play-lh.googleusercontent.com/sjY0YeMySx9TQOFFJgbRa-hJlFICKIKy2sELJB1z4MCwKRxlXNkhvS5G72ZHvK4sqA" height="50"; width="50";>
             </a>
+
+    <script>
+        function getCookie() {
+                console.log("Test")
+                var match = document.cookie.match(RegExp('(?:^|;\\s*)' + "captchapassed" + '=([^;]*)')); 
+            console.log(match)
+                if (match == null) {
+                    alert("You have to complete the captcha again!")
+                    window.location.replace("../index.html");
+                }
+            return match ? match[1] : null;
+        }
+    </script>
 </body>
 <H1> AmericanTheRussian's first theme! <a href="">Cyan World</a> </H1>
 <img src="../ios-assets/image0.jpeg" 
