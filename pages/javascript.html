@@ -11,10 +11,25 @@
 <h2>
 This area is coming soon! 
 <h2>
- 
-<h1>
-Take a look at this cat while you wait!
-</h1>
+<body onload="getCookie()">
+
+    <script>
+        function getCookie() {
+                console.log("Test")
+                var match = document.cookie.match(RegExp('(?:^|;\\s*)' + "captchapassed" + '=([^;]*)')); 
+            console.log(match)
+                if (match == null) {
+                    alert("You have to complete the captcha again!")
+                    window.location.replace("../index.html");
+                }
+            return match ? match[1] : null;
+        }
+    </script>
+
+    <h1>
+    Take a look at this cat while you wait!
+    </h1>
+</body>
 
 <iframe src="https://c.tenor.com/DHUMi9jNHVYAAAAd/pop-cat.gif" title="Coolcat"></iframe>
 
